@@ -7,8 +7,7 @@ import logo from '../assets/logo.png'
 function Layout({ menuItems, role }) {
   const navigate = useNavigate()
   const user = getUser()
-  const [avatar, setAvatar] = useState(getAvatarGlobal())
-
+  const [avatar, setAvatar] = useState(() => localStorage.getItem('user_photo'))
   useEffect(() => {
     const unsub = subscribeAvatar(val => setAvatar(val))
     return unsub

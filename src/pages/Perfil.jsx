@@ -8,7 +8,7 @@ export default function Perfil() {
   const [pass, setPass]         = useState({ current_password: '', new_password: '', confirm_password: '' })
   const [toast, setToast]       = useState(null)
   const [loading, setLoading]   = useState(true)
-  const [avatar, setAvatar]     = useState(getAvatarGlobal())
+  const [avatar, setAvatar] = useState(() => localStorage.getItem('user_photo'))
   const [showMenu, setShowMenu] = useState(false)
   const [cameraOpen, setCameraOpen] = useState(false)
 
