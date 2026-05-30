@@ -67,6 +67,23 @@ export default function Register() {
               {errors[field] && <span style={styles.fieldErr}>{errors[field]}</span>}
             </div>
           ))}
+          <div style={{ marginBottom: '16px' }}>
+  <label style={styles.label}>Nivel físico</label>
+  <div style={{ display: 'flex', gap: '8px' }}>
+    {['principiante', 'medio', 'avanzado'].map(n => (
+      <button key={n} type="button"
+        onClick={() => setForm({...form, nivel: n})}
+        style={{
+          flex: 1, padding: '10px', borderRadius: '12px', cursor: 'pointer',
+          border: '1px solid rgba(255,255,255,0.3)',
+          background: form.nivel === n ? 'rgba(255,255,255,0.35)' : 'rgba(255,255,255,0.1)',
+          color: 'white', fontWeight: form.nivel === n ? 'bold' : 'normal',
+          fontSize: '0.85rem', textTransform: 'capitalize'
+        }}
+      >{n}</button>
+    ))}
+  </div>
+</div>
           <button type="submit" disabled={loading} style={styles.btn}>
             {loading ? 'Registrando...' : 'Crear Cuenta'}
           </button>

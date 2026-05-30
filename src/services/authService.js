@@ -16,7 +16,9 @@ function saveSession(token, user) {
 }
 
 function clearSession() {
+  const photo = localStorage.getItem('user_photo')
   localStorage.clear()
+  if (photo) localStorage.setItem('user_photo', photo)
 }
 
 function authHeaders() {
