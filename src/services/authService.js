@@ -111,3 +111,7 @@ export async function deleteUser(id) {
 }
 
 export { getToken, getUser, clearSession }
+
+export function isAuthenticated() {
+  return Boolean(localStorage.getItem('token'))
+}

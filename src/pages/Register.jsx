@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
-import { registerUser } from '../services/authService'
-import logo from '../assets/logo.png'
+import { useState } from 'react' // Se importó useState para manejar el estado del formulario y los errores
+import { useNavigate, Link } from 'react-router-dom' // Se importó useNavigate para redirigir después del registro exitoso y Link para el enlace de volver al login
+import { registerUser } from '../services/authService' // Se importó la función registerUser para realizar la solicitud de registro al backend
+import logo from '../assets/logo.png' // Se importó el logo para mostrarlo en la página de registro
 
-export default function Register() {
-  const [form, setForm] = useState({ full_name: '', email: '', password: '', confirm: '' })
+export default function Register() { // Se creó el componente Register para manejar la lógica y la interfaz de la página de registro
+  const [form, setForm] = useState({ full_name: '', email: '', password: '', confirm: '' }) 
   const [errors, setErrors] = useState({})
   const [serverError, setServerError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -50,10 +50,10 @@ export default function Register() {
 
         <form onSubmit={handleSubmit}>
           {[
-            { field: 'full_name', label: 'Nombre Completo', type: 'text', placeholder: 'Tu nombre' },
-            { field: 'email',     label: 'Correo',          type: 'email', placeholder: 'correo@ejemplo.com' },
-            { field: 'password',  label: 'Contraseña',      type: 'password', placeholder: '••••••••' },
-            { field: 'confirm',   label: 'Confirmar Contraseña', type: 'password', placeholder: '••••••••' },
+            { field: 'full_name', label: 'Nombre Completo', type: 'text', placeholder: 'Tu nombre' }, // Se cambió "name" a "full_name" para coincidir con el backend
+            { field: 'email',     label: 'Correo',          type: 'email', placeholder: 'correo@ejemplo.com' },// Se cambió "username" a "email" para coincidir con el backend
+            { field: 'password',  label: 'Contraseña',      type: 'password', placeholder: '••••••••' }, // Se cambió "password1" a "password" para coincidir con el backend
+            { field: 'confirm',   label: 'Confirmar Contraseña', type: 'password', placeholder: '••••••••' }, // Se cambió "password2" a "confirm" para diferenciarlo del campo de contraseña principal
           ].map(({ field, label, type, placeholder }) => (
             <div key={field} style={styles.group}>
               <label style={styles.label}>{label}</label>

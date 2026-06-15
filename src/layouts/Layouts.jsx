@@ -104,9 +104,9 @@ function Layout({ menuItems, role }) {
 export function AdminLayout() {
   return <Layout role="admin" menuItems={[
     { to: '/admin/dashboard', icon: '🏠', label: 'Gestión Usuarios' },
-    { icon: '📊', label: 'Reportes', onClick: () => alert('Módulo de Reportes — próximamente') },
-    { icon: '🏢', label: 'Sedes',    onClick: () => alert('Módulo de Sedes — próximamente') },
-    { icon: '⚙️', label: 'Ajustes', onClick: () => alert('Módulo de Ajustes — próximamente') },
+    { icon: '📊', label: 'Reportes', onClick: () => {} },
+    { icon: '🏢', label: 'Sedes',    onClick: () => {} },
+    { icon: '⚙️', label: 'Ajustes', onClick: () => {} },
     { to: '/admin/perfil', icon: '👤', label: 'Mi Perfil' },
   ]} />
 }
@@ -114,9 +114,9 @@ export function AdminLayout() {
 export function UserLayout() {
   return <Layout role="user" menuItems={[
     { to: '/user/dashboard', icon: '🏠', label: 'Mi Resumen' },
-    { icon: '📅', label: 'Reservar Clase',   onClick: () => alert('Módulo Reservar Clase — próximamente') },
-    { icon: '📊', label: 'Mis Avances',      onClick: () => alert('Módulo Mis Avances — próximamente') },
-    { icon: '💳', label: 'Pagos y Membresía',onClick: () => alert('Módulo Pagos — próximamente') },
+    { icon: '📅', label: 'Reservar Clase',   onClick: () => {}},
+    { icon: '📊', label: 'Mis Avances',      onClick: () => {}},
+    { icon: '💳', label: 'Pagos y Membresía',onClick: () => {}},
     { to: '/user/perfil', icon: '👤', label: 'Mi Perfil' },
   ]} />
 }
@@ -124,10 +124,10 @@ export function UserLayout() {
 export function CoachLayout() {
   return <Layout role="coach" menuItems={[
     { to: '/coach/dashboard', icon: '🏠', label: 'Panel Principal' },
-    { icon: '👥', label: 'Mis Alumnos',       onClick: () => alert('Módulo Mis Alumnos — próximamente') },
-    { icon: '🗓️', label: 'Horarios de Clases', onClick: () => alert('Módulo Horarios — próximamente') },
-    { icon: '📊', label: 'Reportes de Avance', onClick: () => alert('Módulo Reportes — próximamente') },
-    { icon: '⚙️', label: 'Configuración',      onClick: () => alert('Módulo Configuración — próximamente') },
+    { icon: '👥', label: 'Mis Alumnos',       onClick: () => {} },
+    { icon: '🗓️', label: 'Horarios de Clases', onClick: () => {} },
+    { icon: '📊', label: 'Reportes de Avance', onClick: () => {} },
+    { icon: '⚙️', label: 'Configuración',      onClick: () => {} },
     { to: '/coach/perfil', icon: '👤', label: 'Mi Perfil' },
   ]} />
 }
