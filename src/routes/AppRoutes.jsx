@@ -13,6 +13,8 @@ import UsersPage      from '../pages/admin/UsersPage'
 import CoachDashboard from '../pages/coach/CoachDashboard'
 import UserDashboard  from '../pages/user/UserDashboard'
 
+import SportsPage from '../pages/sportspage'
+
 // Protege por autenticación
 function ProtectedRoute({ children }) {
   if (!isAuthenticated()) return <Navigate to="/login" replace />
@@ -42,6 +44,7 @@ export default function AppRoutes() {
         <Route path="/admin" element={<RoleRoute allowedRoles={['admin']}><AdminLayout /></RoleRoute>}>
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="users"     element={<UsersPage />} />
+          <Route path="sports"    element={<SportsPage />} />
           <Route path="perfil"    element={<Perfil />} />
         </Route>
 

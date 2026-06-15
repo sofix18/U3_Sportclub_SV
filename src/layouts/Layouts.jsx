@@ -104,6 +104,7 @@ function Layout({ menuItems, role }) {
 export function AdminLayout() {
   return <Layout role="admin" menuItems={[
     { to: '/admin/dashboard', icon: '🏠', label: 'Gestión Usuarios' },
+    { to: '/admin/sports',    icon: '⚽', label: 'Gestión Deportes' }, // Aquí se agrega SOLO para el Admin
     { icon: '📊', label: 'Reportes', onClick: () => {} },
     { icon: '🏢', label: 'Sedes',    onClick: () => {} },
     { icon: '⚙️', label: 'Ajustes', onClick: () => {} },
